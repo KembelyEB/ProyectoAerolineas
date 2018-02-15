@@ -21,7 +21,7 @@ namespace AerolineasDATOS
             {
                 ClsConexion.ConexionDT();
                 conexion.Open();
-                cmd = new NpgsqlCommand("INSERT INTO estudiante (cedula, nombre, contraseña) VALUES ('" + cedula + "', '" + nombre + "', '" + contraseña  + "')", conexion);
+                cmd = new NpgsqlCommand("INSERT INTO usuario (cedula, nombre, contraseña) VALUES ('" + cedula + "', '" + nombre + "', '" + contraseña  + "')", conexion);
                 cmd.ExecuteNonQuery();
                 conexion.Close();
             }
@@ -30,16 +30,16 @@ namespace AerolineasDATOS
             {
             ClsConexion.ConexionDT();
             conexion.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE estudiante SET nombre = '" + nombre + "', edad = '" + contraseña  + "' WHERE cedula = '" + cedula + "'", conexion);
+                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE usuario SET nombre = '" + nombre + "', contraseña = '" + contraseña  + "' WHERE cedula = '" + cedula + "'", conexion);
                 cmd.ExecuteNonQuery();
                 conexion.Close();
             }
 
-            public void EliminarDatos(int cedula)
+            public void EliminarDatos(string cedula)
             {
             ClsConexion.ConexionDT();
             conexion.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("DELETE FROM estudiante WHERE cedula = '" + cedula + "'", conexion);
+                NpgsqlCommand cmd = new NpgsqlCommand("DELETE FROM usuario WHERE cedula = '" + cedula + "'", conexion);
                 cmd.ExecuteNonQuery();
                 conexion.Close();
             }
