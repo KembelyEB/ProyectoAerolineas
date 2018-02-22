@@ -1,49 +1,30 @@
-﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AerolineasDATOS
+﻿namespace AerolineasDATOS
 {
-   public class TarifaVueloDA
+    public class TarifaVueloDA
     {
-
-
-
-
-        Conexion ClsConexion = new Conexion();
-        static NpgsqlConnection conexion;
-        static NpgsqlCommand cmd;
-
-
+        private readonly DataAccessBase _dataAccessBase = new DataAccessBase();
 
         public void InsertarDatos(string identificador, string ruta, int precio)
         {
-            ClsConexion.ConexionDT();
-            conexion.Open();
-            cmd = new NpgsqlCommand("INSERT INTO lugares (identificador, ruta, precio) VALUES ('" + identificador + "', '" + ruta + "', '" + precio + "')", conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            var sql = "INSERT INTO vuelo (identificador, ruta, precio) VALUES ('" + identificador + "', '" + ruta +
+                      "', '" +
+                      precio + "')";
+
+            _dataAccessBase.ExecuteNonQuery(sql);
         }
 
-        public void ModificarDatos(string identificador, string ruta , int precio)
+        public void ModificarDatos(string identificador, string ruta, int precio)
         {
-            ClsConexion.ConexionDT();
-            conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("UPDATE vuelo SET ruta = '" + ruta + "', precio = '" + precio + "' WHERE identificador = '" + identificador + "'", conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            var sql =
+                "UPDATE vuelo SET ruta = '" + ruta + "', precio = '" + precio + "' WHERE identificador = '" +
+                identificador + "'";
+            _dataAccessBase.ExecuteNonQuery(sql);
         }
 
         public void EliminarDatos(string identificador)
         {
-            ClsConexion.ConexionDT();
-            conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("DELETE FROM vuelo WHERE identificador = '" + identificador + "'", conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            var sql = "DELETE FROM vuelo WHERE identificador = '" + identificador + "'";
+            _dataAccessBase.ExecuteNonQuery(sql);
         }
     }
 }

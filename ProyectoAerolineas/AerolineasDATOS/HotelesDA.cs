@@ -1,47 +1,32 @@
-﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AerolineasDATOS
+﻿namespace AerolineasDATOS
 {
     public class HotelesDA
     {
+        private readonly DataAccessBase _dataAccessBase = new DataAccessBase();
 
-        Conexion ClsConexion = new Conexion();
-        static NpgsqlConnection conexion;
-        static NpgsqlCommand cmd;
-
-
-
-        public void InsertarDatos(string identificador, string nombre, Byte foto, string pais, string lugar, int habitaciones)
+        public void InsertarDatos(string identificador, string nombre, byte foto, string pais, string lugar,
+            int habitaciones)
         {
-
-            ClsConexion.ConexionDT();
-            conexion.Open();
-            cmd = new NpgsqlCommand("INSERT INTO hoteles (identificador, nombre, foto, pais, lugar, habitaciones) VALUES ('" + identificador + "', '" + nombre + "', '" + foto + "', '" + pais + "', '" + lugar + "', '" + habitaciones+ "')", conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            var sql = "INSERT INTO hoteles (identificador, nombre, foto, pais, lugar, habitaciones) VALUES ('" +
+                      identificador + "', '" + nombre + "', '" + foto + "', '" + pais + "', '" + lugar + "', '" +
+                      habitaciones + "')";
+            _dataAccessBase.ExecuteNonQuery(sql);
         }
 
-        public void ModificarDatos(string identificador, string nombre, Byte foto, string pais, string lugar, int habitaciones)
+        public void ModificarDatos(string identificador, string nombre, byte foto, string pais, string lugar,
+            int habitaciones)
         {
-            ClsConexion.ConexionDT();
-            conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("UPDATE hoteles SET nombre = '" + nombre + "', foto = '" + foto + "', pais = '" + pais + "', lugar= '" + lugar + "', habitaciones = '" + habitaciones + "' WHERE identificador = '" + identificador + "'", conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            var sql = "UPDATE hoteles SET nombre = '" + nombre + "', foto = '" + foto + "', pais = '" + pais +
+                      "', lugar= '" +
+                      lugar + "', habitaciones = '" + habitaciones + "' WHERE identificador = '" + identificador + "'";
+
+            _dataAccessBase.ExecuteNonQuery(sql);
         }
 
         public void EliminarDatos(string identificador)
         {
-            ClsConexion.ConexionDT();
-            conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("DELETE FROM hoteles WHERE identificador = '" + identificador + "'", conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            var sql = "DELETE FROM hoteles WHERE identificador = '" + identificador + "'";
+            _dataAccessBase.ExecuteNonQuery(sql);
         }
     }
 }

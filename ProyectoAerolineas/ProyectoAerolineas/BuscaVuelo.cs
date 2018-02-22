@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoAerolineas
 {
-    public partial class BuscaVuelo : Form
+    public partial class BuscaVuelo : MetroFramework.Forms.MetroForm
     {
         public BuscaVuelo()
         {
@@ -28,6 +28,11 @@ namespace ProyectoAerolineas
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BuscaVuelo_Load(object sender, EventArgs e)
         {
 
         }

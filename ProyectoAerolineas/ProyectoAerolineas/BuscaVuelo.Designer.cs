@@ -43,35 +43,39 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,10 +84,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(-3, 7);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(663, 402);
+            this.tabControl1.Size = new System.Drawing.Size(688, 425);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -101,10 +105,11 @@
             this.tabPage1.Controls.Add(this.dateTimePicker1);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(655, 376);
+            this.tabPage1.Size = new System.Drawing.Size(680, 399);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Vuelo";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -216,6 +221,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DESTINO:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(659, 380);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dateTimePicker4);
@@ -230,13 +244,122 @@
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Controls.Add(this.textBox4);
             this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(655, 376);
+            this.tabPage2.Size = new System.Drawing.Size(688, 394);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Hoteles";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Location = new System.Drawing.Point(374, 116);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker4.TabIndex = 11;
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(72, 116);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker3.TabIndex = 10;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(340, 42);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 9;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(245, 45);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(89, 13);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "HABITACIONES:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(309, 122);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 13);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "LLEGADA:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(25, 122);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(28, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "IDA:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(309, 115);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 13);
+            this.label7.TabIndex = 5;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(162, 170);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Reservar";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(28, 170);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Buscar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(28, 233);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(589, 120);
+            this.dataGridView2.TabIndex = 2;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(89, 38);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(25, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "DESTINO:";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(655, 380);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // tabPage3
             // 
@@ -252,175 +375,11 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(655, 376);
+            this.tabPage3.Size = new System.Drawing.Size(688, 394);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Vehiculos";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 44);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "DESTINO:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(89, 38);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 1;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(28, 233);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(589, 120);
-            this.dataGridView2.TabIndex = 2;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(28, 170);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(162, 170);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Reservar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(309, 115);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 13);
-            this.label7.TabIndex = 5;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(25, 122);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "IDA:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(309, 122);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 13);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "LLEGADA:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(245, 45);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 13);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "HABITACIONES:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(340, 42);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(72, 116);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker3.TabIndex = 10;
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(374, 116);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker4.TabIndex = 11;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 51);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 13);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "TIPO DE AUTO:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(104, 48);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 1;
-            // 
-            // dateTimePicker5
-            // 
-            this.dateTimePicker5.Location = new System.Drawing.Point(104, 108);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker5.TabIndex = 2;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(48, 115);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(50, 13);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "RETIRA:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(330, 114);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 13);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "ENTREGA:";
-            // 
-            // dateTimePicker6
-            // 
-            this.dateTimePicker6.Location = new System.Drawing.Point(398, 108);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker6.TabIndex = 6;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(59, 212);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(533, 140);
-            this.dataGridView3.TabIndex = 7;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(59, 164);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Buscar";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
@@ -431,24 +390,91 @@
             this.button6.Text = "Reservar";
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(59, 164);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Buscar";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(59, 212);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(533, 140);
+            this.dataGridView3.TabIndex = 7;
+            // 
+            // dateTimePicker6
+            // 
+            this.dateTimePicker6.Location = new System.Drawing.Point(398, 108);
+            this.dateTimePicker6.Name = "dateTimePicker6";
+            this.dateTimePicker6.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker6.TabIndex = 6;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(330, 114);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(62, 13);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "ENTREGA:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(48, 115);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(50, 13);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "RETIRA:";
+            // 
+            // dateTimePicker5
+            // 
+            this.dateTimePicker5.Location = new System.Drawing.Point(104, 108);
+            this.dateTimePicker5.Name = "dateTimePicker5";
+            this.dateTimePicker5.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker5.TabIndex = 2;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(104, 48);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 51);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(86, 13);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "TIPO DE AUTO:";
+            // 
             // BuscaVuelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(687, 426);
+            this.ClientSize = new System.Drawing.Size(693, 431);
             this.Controls.Add(this.tabControl1);
             this.Name = "BuscaVuelo";
             this.Text = "BuscaVuelo";
+            this.Load += new System.EventHandler(this.BuscaVuelo_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
@@ -494,5 +520,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

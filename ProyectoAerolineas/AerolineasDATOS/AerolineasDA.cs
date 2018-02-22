@@ -1,46 +1,30 @@
-﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AerolineasENTIDADES;
 
 namespace AerolineasDATOS
 {
     public class AerolineasDA
     {
+        private readonly DataAccessBase _dataAccessBase = new DataAccessBase();
 
-        Conexion ClsConexion = new Conexion();
-        static NpgsqlConnection conexion;
-        static NpgsqlCommand cmd;
-
-
-
-        public void InsertarDatos(string identificador, string nombre)
+        public void InsertarDatos(Aerolinea aerolinea)
         {
-            ClsConexion.ConexionDT();
-            conexion.Open();
-            cmd = new NpgsqlCommand("INSERT INTO aerolineas (identificador, nombre) VALUES ('" + identificador + "', '" + nombre + "')", conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            var sql = "INSERT INTO aerolineas (identificador, nombre) VALUES ('" + aerolinea.Identificador + "', '" +
+                      aerolinea.Nombre +
+                      "')";
+            _dataAccessBase.ExecuteNonQuery(sql);
         }
 
-        public void ModificarDatos(string identificador, string nombre)
+        public void ModificarDatos(Aerolinea aerolinea)
         {
-            ClsConexion.ConexionDT();
-            conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("UPDATE aerolineas SET nombre = '" + nombre + "' WHERE identificador = '" + identificador + "'", conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            var sql = "UPDATE aerolineas SET nombre = '" + aerolinea.Nombre + "' WHERE identificador = '" +
+                      aerolinea.Identificador + "'";
+            _dataAccessBase.ExecuteNonQuery(sql);
         }
 
         public void EliminarDatos(string identificador)
         {
-            ClsConexion.ConexionDT();
-            conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("DELETE FROM aerolineas WHERE identificador = '" + identificador + "'", conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            var sql = "DELETE FROM aerolineas WHERE identificador = '" + identificador + "'";
+            _dataAccessBase.ExecuteNonQuery(sql);
         }
     }
 }

@@ -1,46 +1,31 @@
-﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AerolineasDATOS
+﻿namespace AerolineasDATOS
 {
-   public class PaisesDA
+    public class PaisesDA
     {
+        private readonly DataAccessBase _dataAccessBase = new DataAccessBase();
 
-        Conexion ClsConexion = new Conexion();
-        static NpgsqlConnection conexion;
-        static NpgsqlCommand cmd;
-
-
-
-        public void InsertarDatos(string identificador, string nombre, Byte bandera)
+        public void InsertarDatos(string identificador, string nombre, byte bandera)
         {
-            ClsConexion.ConexionDT();
-            conexion.Open();
-            cmd = new NpgsqlCommand("INSERT INTO paises (identificador, nombre, bandera) VALUES ('" + identificador + "', '" + nombre + "', '" + bandera + "')", conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            var sql = "INSERT INTO paises (identificador, nombre, bandera) VALUES ('" + identificador + "', '" +
+                      nombre +
+                      "', '" + bandera + "')";
+
+            _dataAccessBase.ExecuteNonQuery(sql);
         }
 
-        public void ModificarDatos(string identificador, string nombre, Byte bandera)
+        public void ModificarDatos(string identificador, string nombre, byte bandera)
         {
-            ClsConexion.ConexionDT();
-            conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("UPDATE paises SET nombre = '" + nombre + "', bandera = '" + bandera + "' WHERE identificador = '" + identificador + "'", conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            var sql = "UPDATE paises SET nombre = '" + nombre + "', bandera = '" + bandera +
+                      "' WHERE identificador = '" +
+                      identificador + "'";
+
+            _dataAccessBase.ExecuteNonQuery(sql);
         }
 
         public void EliminarDatos(string identificador)
         {
-            ClsConexion.ConexionDT();
-            conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("DELETE FROM paises WHERE identificador = '" + identificador + "'", conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            var sql = "DELETE FROM paises WHERE identificador = '" + identificador + "'";
+            _dataAccessBase.ExecuteNonQuery(sql);
         }
     }
 }

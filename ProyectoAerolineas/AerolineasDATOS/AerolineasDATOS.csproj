@@ -54,7 +54,8 @@
   <ItemGroup>
     <Compile Include="AerolineasDA.cs" />
     <Compile Include="AeropuertosDA.cs" />
-    <Compile Include="Conexion.cs" />
+    <Compile Include="ConnectionStringProvider.cs" />
+    <Compile Include="DataAccessBase.cs" />
     <Compile Include="HotelesDA.cs" />
     <Compile Include="LugaresDA.cs" />
     <Compile Include="PaisesDA.cs" />
@@ -67,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AerolineasENTIDADES\AerolineasENTIDADES.csproj">
+      <Project>{b75a301b-01ae-4bec-b05e-00a6e3abaa1f}</Project>
+      <Name>AerolineasENTIDADES</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
