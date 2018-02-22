@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace ProyectoAerolineas
 {
-    public partial class Principal : Form
+    public partial class TarifaVuelo : MetroFramework.Forms.MetroForm
     {
-        public Principal()
+        public TarifaVuelo()
         {
             InitializeComponent();
         }
 
-        private void registrarHoelToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void registrarPaisToolStripMenuItem_Click(object sender, EventArgs e)
+        private void TarifaVuelo_Load(object sender, EventArgs e)
         {
 
         }

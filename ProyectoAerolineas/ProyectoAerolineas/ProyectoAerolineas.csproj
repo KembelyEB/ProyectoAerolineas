@@ -55,17 +55,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aeropuerto.Designer.cs">
+      <DependentUpon>Aeropuerto.cs</DependentUpon>
+    </Compile>
     <Compile Include="BuscaVuelo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BuscaVuelo.Designer.cs">
       <DependentUpon>BuscaVuelo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel.Designer.cs">
+      <DependentUpon>Hotel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lugar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lugar.Designer.cs">
+      <DependentUpon>Lugar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pais.Designer.cs">
+      <DependentUpon>Pais.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -81,11 +105,50 @@
     <Compile Include="RegistroUsuario.Designer.cs">
       <DependentUpon>RegistroUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ruta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ruta.Designer.cs">
+      <DependentUpon>Ruta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TarifaHoteles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TarifaHoteles.Designer.cs">
+      <DependentUpon>TarifaHoteles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TarifaVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TarifaVuelo.Designer.cs">
+      <DependentUpon>TarifaVuelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vuelo.Designer.cs">
+      <DependentUpon>Vuelo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Aeropuerto.resx">
+      <DependentUpon>Aeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BuscaVuelo.resx">
       <DependentUpon>BuscaVuelo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hotel.resx">
+      <DependentUpon>Hotel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lugar.resx">
+      <DependentUpon>Lugar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pais.resx">
+      <DependentUpon>Pais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,6 +162,18 @@
     </Compile>
     <EmbeddedResource Include="RegistroUsuario.resx">
       <DependentUpon>RegistroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ruta.resx">
+      <DependentUpon>Ruta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TarifaHoteles.resx">
+      <DependentUpon>TarifaHoteles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TarifaVuelo.resx">
+      <DependentUpon>TarifaVuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vuelo.resx">
+      <DependentUpon>Vuelo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config">
       <SubType>Designer</SubType>
