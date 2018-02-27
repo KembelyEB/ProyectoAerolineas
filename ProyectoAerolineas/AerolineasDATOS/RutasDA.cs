@@ -1,10 +1,12 @@
-﻿namespace AerolineasDATOS
+﻿using AerolineasENTIDADES;
+
+namespace AerolineasDATOS
 {
     public class RutasDA
     {
         private readonly DataAccessBase _dataAccessBase = new DataAccessBase();
 
-        public void InsertarDatos(string identificador, string origen, string destino, string duracion)
+        public void InsertarDatos(Ruta ruta)
         {
             var sql = "INSERT INTO ruta (identificador, pais_origen, pais_destino, duracion) VALUES ('" +
                       identificador +
@@ -13,7 +15,7 @@
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
-        public void ModificarDatos(string identificador, string origen, string destino, string duracion)
+        public void ModificarDatos(Ruta ruta)
         {
             var sql = "UPDATE ruta SET pais_origen = '" + origen + "', pais_destino = '" + destino + "', duracion = '" +
                       duracion + "' WHERE identificador = '" + identificador + "'";

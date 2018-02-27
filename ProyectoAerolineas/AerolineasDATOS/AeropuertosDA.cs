@@ -1,17 +1,19 @@
-﻿namespace AerolineasDATOS
+﻿using AerolineasENTIDADES;
+
+namespace AerolineasDATOS
 {
     public class AeropuertosDA
     {
         private readonly DataAccessBase _dataAccessBase = new DataAccessBase();
 
-        public void InsertarDatos(string identificador, string nombre, string localidad, string IATA)
+        public void InsertarDatos(Aeropuerto aeropuerto)
         {
             var sql = "INSERT INTO aeropuertos (identificador, nombre, localidad, iata ) VALUES ('" + identificador +
                       "', '" + nombre + "', '" + localidad + "', '" + IATA + "')";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
-        public void ModificarDatos(string identificador, string nombre, string localidad, string IATA)
+        public void ModificarDatos(Aeropuerto aeropuerto)
         {
             var sql = "UPDATE aeropuertos SET nombre = '" + nombre + "', localidad = '" + localidad + "', iata = '" +
                       IATA + "' WHERE identificador = '" + identificador + "'";

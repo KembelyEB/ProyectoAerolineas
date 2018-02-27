@@ -1,10 +1,12 @@
-﻿namespace AerolineasDATOS
+﻿using AerolineasENTIDADES;
+
+namespace AerolineasDATOS
 {
     public class PaisesDA
     {
         private readonly DataAccessBase _dataAccessBase = new DataAccessBase();
 
-        public void InsertarDatos(string identificador, string nombre, byte bandera)
+        public void InsertarDatos(Pais pais)
         {
             var sql = "INSERT INTO paises (identificador, nombre, bandera) VALUES ('" + identificador + "', '" +
                       nombre +
@@ -13,7 +15,7 @@
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
-        public void ModificarDatos(string identificador, string nombre, byte bandera)
+        public void ModificarDatos(Pais pais)
         {
             var sql = "UPDATE paises SET nombre = '" + nombre + "', bandera = '" + bandera +
                       "' WHERE identificador = '" +

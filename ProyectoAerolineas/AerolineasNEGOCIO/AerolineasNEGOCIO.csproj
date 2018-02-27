@@ -44,9 +44,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AerolineaBO.cs" />
+    <Compile Include="PaisesBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioBO.cs" />
+    <Compile Include="Validadores\AeropuertoValidador.cs" />
+    <Compile Include="Validadores\HotelValidador.cs" />
+    <Compile Include="Validadores\LugarValidador.cs" />
+    <Compile Include="Validadores\PaisValidador.cs" />
+    <Compile Include="Validadores\RutaValidador.cs" />
+    <Compile Include="Validadores\TarifaHotelValidador.cs" />
+    <Compile Include="Validadores\TarifaVueloValidador.cs" />
     <Compile Include="Validadores\UsuarioValidator.cs" />
+    <Compile Include="Validadores\VehiculoValidador.cs" />
+    <Compile Include="Validadores\VueloValidador.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AerolineasDATOS\AerolineasDATOS.csproj">

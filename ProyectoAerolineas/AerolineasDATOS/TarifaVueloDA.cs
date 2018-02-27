@@ -1,10 +1,12 @@
-﻿namespace AerolineasDATOS
+﻿using AerolineasENTIDADES;
+
+namespace AerolineasDATOS
 {
     public class TarifaVueloDA
     {
         private readonly DataAccessBase _dataAccessBase = new DataAccessBase();
 
-        public void InsertarDatos(string identificador, string ruta, int precio)
+        public void InsertarDatos(TarifaVuelo tarifaVuelo)
         {
             var sql = "INSERT INTO vuelo (identificador, ruta, precio) VALUES ('" + identificador + "', '" + ruta +
                       "', '" +
@@ -13,7 +15,7 @@
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
-        public void ModificarDatos(string identificador, string ruta, int precio)
+        public void ModificarDatos(TarifaVuelo tarifaVuelo)
         {
             var sql =
                 "UPDATE vuelo SET ruta = '" + ruta + "', precio = '" + precio + "' WHERE identificador = '" +

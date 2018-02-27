@@ -1,11 +1,12 @@
-﻿namespace AerolineasDATOS
+﻿using AerolineasENTIDADES;
+
+namespace AerolineasDATOS
 {
     public class HotelesDA
     {
         private readonly DataAccessBase _dataAccessBase = new DataAccessBase();
 
-        public void InsertarDatos(string identificador, string nombre, byte foto, string pais, string lugar,
-            int habitaciones)
+        public void InsertarDatos(Hotel hotel)
         {
             var sql = "INSERT INTO hoteles (identificador, nombre, foto, pais, lugar, habitaciones) VALUES ('" +
                       identificador + "', '" + nombre + "', '" + foto + "', '" + pais + "', '" + lugar + "', '" +
@@ -13,8 +14,7 @@
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
-        public void ModificarDatos(string identificador, string nombre, byte foto, string pais, string lugar,
-            int habitaciones)
+        public void ModificarDatos(Hotel hotel)
         {
             var sql = "UPDATE hoteles SET nombre = '" + nombre + "', foto = '" + foto + "', pais = '" + pais +
                       "', lugar= '" +

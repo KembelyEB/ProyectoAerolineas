@@ -1,11 +1,12 @@
-﻿namespace AerolineasDATOS
+﻿using AerolineasENTIDADES;
+
+namespace AerolineasDATOS
 {
     public class VehiculoDA
     {
         private readonly DataAccessBase _dataAccessBase = new DataAccessBase();
 
-        public void InsertarDatos(string identificador, string marca, string modelo, string tipo, int precio,
-            int cantidad)
+        public void InsertarDatos(Vehiculo vehiculo)
         {
             var sql =
                 "INSERT INTO vehiculo (identificador, marca, modelo, tipo, precio, cantidad) VALUES ('" +
@@ -15,8 +16,7 @@
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
-        public void ModificarDatos(string identificador, string marca, string modelo, string tipo, int precio,
-            int cantidad)
+        public void ModificarDatos(Vehiculo vehiculo)
         {
             var sql =
                 "UPDATE vehiculo SET marca = '" + marca + "', modelo = '" + modelo + "', tipo = '" + tipo +
