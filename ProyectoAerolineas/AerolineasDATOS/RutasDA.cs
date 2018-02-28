@@ -9,16 +9,16 @@ namespace AerolineasDATOS
         public void InsertarDatos(Ruta ruta)
         {
             var sql = "INSERT INTO ruta (identificador, pais_origen, pais_destino, duracion) VALUES ('" +
-                      identificador +
-                      "', '" + origen + "', '" + destino + "', '" + duracion + "')";
+                      ruta.Identificador +
+                      "', '" + ruta.Pais_Origen + "', '" + ruta.Pais_Destino + "', '" + ruta.Duracion + "')";
 
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
         public void ModificarDatos(Ruta ruta)
         {
-            var sql = "UPDATE ruta SET pais_origen = '" + origen + "', pais_destino = '" + destino + "', duracion = '" +
-                      duracion + "' WHERE identificador = '" + identificador + "'";
+            var sql = "UPDATE ruta SET pais_origen = '" + ruta.Pais_Origen + "', pais_destino = '" + ruta.Pais_Destino + "', duracion = '" +
+                     ruta.Duracion + "' WHERE identificador = '" + ruta.Identificador + "'";
 
             _dataAccessBase.ExecuteNonQuery(sql);
         }

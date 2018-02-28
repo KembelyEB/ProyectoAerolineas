@@ -8,13 +8,13 @@ namespace AerolineasDATOS
 
         public void InsertarDatos(Lugar lugar)
         {
-            var sql = "INSERT INTO lugares (identificador, nombre) VALUES ('" + identificador + "', '" + nombre + "')";
+            var sql = "INSERT INTO lugares (identificador, nombre) VALUES ('" + lugar.Identificador + "', '" + lugar.Nombre + "')";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
         public void ModificarDatos(Lugar lugar)
         {
-            var sql = "UPDATE lugares SET nombre = '" + nombre + "' WHERE identificador = '" + identificador + "'";
+            var sql = "UPDATE lugares SET nombre = '" + lugar.Nombre + "' WHERE identificador = '" + lugar.Identificador + "'";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 

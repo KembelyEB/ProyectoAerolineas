@@ -8,15 +8,15 @@ namespace AerolineasDATOS
 
         public void InsertarDatos(Aeropuerto aeropuerto)
         {
-            var sql = "INSERT INTO aeropuertos (identificador, nombre, localidad, iata ) VALUES ('" + identificador +
-                      "', '" + nombre + "', '" + localidad + "', '" + IATA + "')";
+            var sql = "INSERT INTO aeropuertos (identificador, nombre, localidad, iata ) VALUES ('" + aeropuerto.Identificador +
+                      "', '" + aeropuerto.Nombre + "', '" + aeropuerto.Localidad + "', '" + aeropuerto.Iata + "')";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
         public void ModificarDatos(Aeropuerto aeropuerto)
         {
-            var sql = "UPDATE aeropuertos SET nombre = '" + nombre + "', localidad = '" + localidad + "', iata = '" +
-                      IATA + "' WHERE identificador = '" + identificador + "'";
+            var sql = "UPDATE aeropuertos SET nombre = '" + aeropuerto.Nombre + "', localidad = '" + aeropuerto.Localidad + "', iata = '" +
+                      aeropuerto.Iata+ "' WHERE identificador = '" + aeropuerto.Identificador + "'";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 

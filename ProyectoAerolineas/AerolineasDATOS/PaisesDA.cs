@@ -8,18 +8,18 @@ namespace AerolineasDATOS
 
         public void InsertarDatos(Pais pais)
         {
-            var sql = "INSERT INTO paises (identificador, nombre, bandera) VALUES ('" + identificador + "', '" +
-                      nombre +
-                      "', '" + bandera + "')";
+            var sql = "INSERT INTO paises (identificador, nombre, bandera) VALUES ('" + pais.Identificador + "', '" +
+                      pais.Nombre +
+                      "', '" + pais.Bandera + "')";
 
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
         public void ModificarDatos(Pais pais)
         {
-            var sql = "UPDATE paises SET nombre = '" + nombre + "', bandera = '" + bandera +
+            var sql = "UPDATE paises SET nombre = '" + pais.Nombre + "', bandera = '" + pais.Bandera +
                       "' WHERE identificador = '" +
-                      identificador + "'";
+                      pais.Identificador + "'";
 
             _dataAccessBase.ExecuteNonQuery(sql);
         }

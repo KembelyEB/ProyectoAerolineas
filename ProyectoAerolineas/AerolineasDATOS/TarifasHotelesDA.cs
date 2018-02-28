@@ -9,7 +9,7 @@ namespace AerolineasDATOS
         public void InsertarDatos(TarifaHotel tarifaHotel)
         {
             var sql =
-                "INSERT INTO tarifas_hoteles (identificador, precio) VALUES ('" + identificador + "', '" + precio +
+                "INSERT INTO tarifas_hoteles (identificador, precio) VALUES ('" + tarifaHotel.Identificador + "', '" + tarifaHotel.Precio +
                 "')";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
@@ -17,7 +17,7 @@ namespace AerolineasDATOS
         public void ModificarDatos(TarifaHotel tarifaHotel)
         {
             var sql =
-                "UPDATE tarifas_hoteles SET precio = '" + precio + "' WHERE identificador = '" + identificador + "'";
+                "UPDATE tarifas_hoteles SET precio = '" + tarifaHotel.Precio + "' WHERE identificador = '" + tarifaHotel.Identificador + "'";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 

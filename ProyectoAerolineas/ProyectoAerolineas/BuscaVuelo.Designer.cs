@@ -248,7 +248,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(688, 394);
+            this.tabPage2.Size = new System.Drawing.Size(680, 399);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Hoteles";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -335,6 +335,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(589, 120);
             this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // textBox4
             // 
@@ -375,7 +376,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(688, 394);
+            this.tabPage3.Size = new System.Drawing.Size(680, 399);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Vehiculos";
             this.tabPage3.UseVisualStyleBackColor = true;

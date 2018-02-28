@@ -10,7 +10,7 @@ namespace AerolineasDATOS
         {
             var sql =
                 "INSERT INTO vehiculo (identificador, marca, modelo, tipo, precio, cantidad) VALUES ('" +
-                identificador + "', '" + marca + "', '" + modelo + "', '" + tipo + "', '" + precio + "', '" + cantidad +
+                 vehiculo.Identificador + "', '" + vehiculo.Marca + "', '" + vehiculo.Modelo + "', '" + vehiculo.Tipo + "', '" + vehiculo.Precio + "', '" + vehiculo.Cantidad +
                 "')";
 
             _dataAccessBase.ExecuteNonQuery(sql);
@@ -19,8 +19,8 @@ namespace AerolineasDATOS
         public void ModificarDatos(Vehiculo vehiculo)
         {
             var sql =
-                "UPDATE vehiculo SET marca = '" + marca + "', modelo = '" + modelo + "', tipo = '" + tipo +
-                "', precio= '" + precio + "', cantidad = '" + cantidad + "' WHERE identificador = '" + identificador +
+                "UPDATE vehiculo SET marca = '" + vehiculo.Marca + "', modelo = '" + vehiculo.Modelo + "', tipo = '" + vehiculo.Tipo +
+                "', precio= '" + vehiculo.Precio + "', cantidad = '" + vehiculo.Cantidad + "' WHERE identificador = '" + vehiculo.Identificador +
                 "'";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
