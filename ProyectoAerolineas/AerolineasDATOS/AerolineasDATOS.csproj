@@ -52,7 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AerolineasDA.cs" />
     <Compile Include="AeropuertosDA.cs" />
     <Compile Include="ConnectionStringProvider.cs" />
     <Compile Include="DataAccessBase.cs" />

@@ -1,6 +1,6 @@
 ﻿namespace ProyectoAerolineas
 {
-    partial class Ruta
+    partial class Rutass
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDuracion = new System.Windows.Forms.TextBox();
+            this.txtPaisOrigen = new System.Windows.Forms.TextBox();
+            this.txtPaisDestino = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblMensaje = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtDuracion
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtDuracion.Location = new System.Drawing.Point(136, 26);
+            this.txtDuracion.Name = "txtDuracion";
+            this.txtDuracion.Size = new System.Drawing.Size(100, 20);
+            this.txtDuracion.TabIndex = 0;
             // 
-            // textBox2
+            // txtPaisOrigen
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 79);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtPaisOrigen.Location = new System.Drawing.Point(136, 79);
+            this.txtPaisOrigen.Name = "txtPaisOrigen";
+            this.txtPaisOrigen.Size = new System.Drawing.Size(100, 20);
+            this.txtPaisOrigen.TabIndex = 1;
             // 
-            // textBox3
+            // txtPaisDestino
             // 
-            this.textBox3.Location = new System.Drawing.Point(396, 80);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtPaisDestino.Location = new System.Drawing.Point(396, 80);
+            this.txtPaisDestino.Name = "txtPaisDestino";
+            this.txtPaisDestino.Size = new System.Drawing.Size(100, 20);
+            this.txtPaisDestino.TabIndex = 2;
             // 
             // label1
             // 
@@ -89,6 +90,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -116,20 +118,29 @@
             this.dataGridView1.Size = new System.Drawing.Size(475, 121);
             this.dataGridView1.TabIndex = 8;
             // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Location = new System.Drawing.Point(415, 137);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 13);
+            this.lblMensaje.TabIndex = 9;
+            // 
             // Ruta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 301);
+            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPaisDestino);
+            this.Controls.Add(this.txtPaisOrigen);
+            this.Controls.Add(this.txtDuracion);
             this.Name = "Ruta";
             this.Text = "Duracion:";
             this.Load += new System.EventHandler(this.Ruta_Load);
@@ -141,14 +152,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDuracion;
+        private System.Windows.Forms.TextBox txtPaisOrigen;
+        private System.Windows.Forms.TextBox txtPaisDestino;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }

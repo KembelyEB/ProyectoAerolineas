@@ -24,3 +24,4 @@ namespace AerolineasNEGOCIO.Validadores
             RuleFor(Vehiculo => Vehiculo.Cantidad).Length(1, 50);
         }
     }
+    }

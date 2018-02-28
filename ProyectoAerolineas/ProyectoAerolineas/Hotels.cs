@@ -12,41 +12,40 @@ using System.Windows.Forms;
 
 namespace ProyectoAerolineas
 {
-    public partial class TarifaHoteles : MetroFramework.Forms.MetroForm
+    public partial class Hotels : MetroFramework.Forms.MetroForm
     {
-
-    
-        public TarifaHoteles()
+        public Hotels()
         {
             InitializeComponent();
         }
 
-        private void TarifaHoteles_Load(object sender, EventArgs e)
+        private void Hotel_Load(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            InsertarTarifaHotel();
+            InsertarHotel();
         }
 
-        private void InsertarTarifaHotel()
+        private void InsertarHotel()
         {
-            var tHotel = new TarifaHotel
+            var hotel = new Hotel
             {
-                Precio = txtPrecio.Text,
+                Nombre = txtNombre.Text,
+                Pais = txtPais.Text,
+                Lugar = txtLugar.Text,
+                Habitacion = txtPais.Text,
                
-
-
             };
 
-            var taHotelBo = new TarifaHotelBO();
+            var hotelBo = new HotelBO();
 
             try
             {
-                taHotelBo.RegistrarTarifaHotel(tHotel);
-                MonstrarMensaje("Tarifa hotel creado satisfactoriamente");
+                hotelBo.RegistrarHotel(hotel);
+                MonstrarMensaje("hotel creado satisfactoriamente");
             }
             catch (Exception e)
             {
@@ -67,5 +66,6 @@ namespace ProyectoAerolineas
             lblMensaje.ForeColor = Color.DarkRed;
             lblMensaje.Visible = true;
         }
+
     }
 }

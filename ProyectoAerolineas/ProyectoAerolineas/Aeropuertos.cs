@@ -12,41 +12,38 @@ using System.Windows.Forms;
 
 namespace ProyectoAerolineas
 {
-    public partial class TarifaHoteles : MetroFramework.Forms.MetroForm
+    public partial class Aeropuertos : MetroFramework.Forms.MetroForm
     {
-
-    
-        public TarifaHoteles()
+        public Aeropuertos()
         {
             InitializeComponent();
         }
 
-        private void TarifaHoteles_Load(object sender, EventArgs e)
+        private void Aeropuerto_Load(object sender, EventArgs e)
+        {
+            InsertarAeropuerto();
+        }
+
+        private void Registrar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void InsertarAeropuerto()
         {
-            InsertarTarifaHotel();
-        }
-
-        private void InsertarTarifaHotel()
-        {
-            var tHotel = new TarifaHotel
+            var aeropuerto = new Aeropuerto
             {
-                Precio = txtPrecio.Text,
-               
-
-
+                Nombre = txtNombre.Text,
+                Localidad= txtLocalidad.Text,
+                Iata = txtIata.Text
             };
 
-            var taHotelBo = new TarifaHotelBO();
+            var AeropuertoBo = new AeropuertoBO();
 
             try
             {
-                taHotelBo.RegistrarTarifaHotel(tHotel);
-                MonstrarMensaje("Tarifa hotel creado satisfactoriamente");
+                AeropuertoBo.RegistrarAeropuerto(aeropuerto);
+                MonstrarMensaje("Aeropuerto creado satisfactoriamente");
             }
             catch (Exception e)
             {
