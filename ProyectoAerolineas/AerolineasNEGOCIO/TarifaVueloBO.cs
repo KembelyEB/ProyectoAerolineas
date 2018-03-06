@@ -22,6 +22,19 @@ namespace AerolineasNEGOCIO
             _dataAccess.InsertarDatos(tarifaVuelo);
         }
 
+        public void Modificar(TarifaVuelo tVuelo)
+        {
+            var validator = new TarifaVueloValidador();
+            validator.ValidateAndThrow(tVuelo);
+
+            _dataAccess.ModificarDatos(tVuelo);
+        }
+        public void Eliminaro(string id)
+        {
+       
+            _dataAccess.EliminarDatos(id);
+
+        }
 
 
 

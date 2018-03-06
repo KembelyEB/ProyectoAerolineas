@@ -22,6 +22,20 @@ namespace AerolineasNEGOCIO
 
             _dataAccess.InsertarDatos(aeropuerto);
         }
+
+        public void Modificar(Aeropuerto aeropuerto)
+        {
+            var validator = new AeropuertoValidador();
+            validator.ValidateAndThrow(aeropuerto);
+
+            _dataAccess.ModificarDatos(aeropuerto);
+        }
+        public void Eliminaro(string id)
+        {
+
+            _dataAccess.EliminarDatos(id);
+
+        }
     }
 
 

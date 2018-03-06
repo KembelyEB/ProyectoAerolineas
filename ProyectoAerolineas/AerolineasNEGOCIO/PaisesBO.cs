@@ -23,7 +23,19 @@ namespace AerolineasNEGOCIO
             _dataAccess.InsertarDatos(pais);
         }
 
+        public void Modificar(Pais pais)
+        {
+            var validator = new PaisValidador();
+            validator.ValidateAndThrow(pais);
 
+            _dataAccess.ModificarDatos(pais);
+        }
+        public void Eliminaro(string id)
+        {
+
+            _dataAccess.EliminarDatos(id);
+
+        }
 
     }
 }

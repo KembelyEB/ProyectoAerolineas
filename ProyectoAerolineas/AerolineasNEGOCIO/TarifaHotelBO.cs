@@ -21,5 +21,20 @@ namespace AerolineasNEGOCIO
 
             _dataAccess.InsertarDatos(tarifaHotel);
         }
+
+        public void Modificar(TarifaHotel tHotel)
+        {
+            var validator = new TarifaHotelValidador();
+            validator.ValidateAndThrow(tHotel);
+
+            _dataAccess.ModificarDatos(tHotel);
+        }
+        public void Eliminar(string id)
+        {
+
+            _dataAccess.EliminarDatos(id);
+
+        }
+
     }
 }

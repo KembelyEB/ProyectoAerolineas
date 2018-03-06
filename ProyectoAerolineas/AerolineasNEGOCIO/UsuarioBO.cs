@@ -21,5 +21,21 @@ namespace AerolineasNEGOCIO
         {
             return true;
         }
+
+        public void Modificar(Usuario usuario)
+        {
+            var validator = new UsuarioValidator();
+            validator.ValidateAndThrow(usuario);
+
+            _dataAccess.ModificarDatos(usuario);
+        }
+        public void Eliminar(Usuario cedula)
+        {
+            var validator = new UsuarioValidator();
+            validator.ValidateAndThrow(cedula);
+
+            _dataAccess.EliminarDatos(cedula);
+
+        }
     }
 }

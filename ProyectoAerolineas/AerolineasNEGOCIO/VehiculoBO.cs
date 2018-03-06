@@ -21,6 +21,17 @@ namespace AerolineasNEGOCIO
 
             _dataAccess.InsertarDatos(vehiculo);
         }
+        public void ModificarVehiculo(Vehiculo vehiculo)
+        {
+            var validator = new VehiculoValidador();
+            validator.ValidateAndThrow(vehiculo);
 
+            _dataAccess.ModificarDatos(vehiculo);
+        }
+        public void EliminarVehiculo(string id)
+        {
+            _dataAccess.EliminarDatos(id);
+
+        }
     }
 }

@@ -22,7 +22,19 @@ namespace AerolineasNEGOCIO
             _dataAccess.InsertarDatos(ruta);
         }
 
+        public void Modificar(Ruta ruta)
+        {
+            var validator = new RutaValidador();
+            validator.ValidateAndThrow(ruta);
 
+            _dataAccess.ModificarDatos(ruta);
+        }
+        public void Eliminaro(string id)
+        {
+
+            _dataAccess.EliminarDatos(id);
+
+        }
 
     }
 }
