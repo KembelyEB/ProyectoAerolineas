@@ -26,7 +26,7 @@ namespace ProyectoAerolineas
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            InsertarVehiculo();
         }
 
         private void InsertarVehiculo()
@@ -68,6 +68,71 @@ namespace ProyectoAerolineas
             lblMensaje.Text = mensaje;
             lblMensaje.ForeColor = Color.DarkRed;
             lblMensaje.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ModificarVehiculo();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EliminarVehiculo();
+        }
+        private void ModificarVehiculo()
+        {
+            var vehiculo = new Vehiculo
+            {
+                Marca = txtMarca.Text,
+                Modelo = txtModelo.Text,
+                Tipo = txtTipo.Text,
+                Precio = txtPrecio.Text,
+                Cantidad = txtPrecio.Text,
+
+
+
+            };
+
+            var vehiculoBo = new VehiculoBO();
+
+            try
+            {
+                vehiculoBo.ModificarVehiculo(vehiculo);
+                MonstrarMensaje("Vehiculo modificado satisfactoriamente");
+            }
+            catch (Exception e)
+            {
+                MonstrarError(e.Message);
+            }
+        }
+        private void EliminarVehiculo()
+        {
+            var vehiculo = new Vehiculo
+            {
+                Marca = txtMarca.Text,
+                Modelo = txtModelo.Text,
+                Tipo = txtTipo.Text,
+                Precio = txtPrecio.Text,
+                Cantidad = txtPrecio.Text,
+
+
+
+            };
+
+            var vehiculoBo = new VehiculoBO();
+
+            try
+            {
+                  if (!txtMarca.Text.Equals(""))
+                {
+                    vehiculoBo.EliminarVehiculo(txtMarca.Text.Trim());
+                    MonstrarMensaje("Vehiculo eliminado satisfactoriamente");
+                }
+            }
+            catch (Exception e)
+            {
+                MonstrarError(e.Message);
+            }
         }
     }
 }

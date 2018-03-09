@@ -29,7 +29,7 @@ namespace AerolineasNEGOCIO
 
             _dataAccess.ModificarDatos(hotel);
         }
-        public void Eliminaro(string id)
+        public void Eliminar(string id)
         {
 
             _dataAccess.EliminarDatos(id);

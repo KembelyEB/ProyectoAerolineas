@@ -68,5 +68,70 @@ namespace ProyectoAerolineas
             lblMensaje.Visible = true;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void ModificarTarifaVuelo()
+        {
+            var tVuelo = new TarifaVuelo
+            {
+
+                Ruta = txtRuta.Text,
+                Precio = txtPrecio.Text,
+
+
+
+            };
+
+            var taVueloBo = new TarifaVueloBO();
+
+            try
+            {
+                taVueloBo.Modificar(tVuelo);
+                MonstrarMensaje("Tarifa hotel creado satisfactoriamente");
+            }
+            catch (Exception e)
+            {
+                MonstrarError(e.Message);
+            }
+        }
+
+        private void EliminarTarifaVuelo()
+        {
+            var tVuelo = new TarifaVuelo
+            {
+
+                Ruta = txtRuta.Text,
+                Precio = txtPrecio.Text,
+
+
+
+            };
+
+            var taVueloBo = new TarifaVueloBO();
+
+            try
+            {
+                if (!txtRuta.Text.Equals(""))
+                {
+                    taVueloBo.Eliminaro(txtRuta.Text.Trim());
+                    MonstrarMensaje("Tarifa Vuelo  eliminado satisfactoriamente");
+                }
+            }
+            catch (Exception e)
+            {
+                MonstrarError(e.Message);
+            }
+        }
+
+
     }
 }

@@ -1,4 +1,6 @@
 ﻿using AerolineasENTIDADES;
+using Npgsql;
+using System.Collections.Generic;
 
 namespace AerolineasDATOS
 {
@@ -28,6 +30,35 @@ namespace AerolineasDATOS
         public void EliminarDatos(string identificador)
         {
             var sql = "DELETE FROM vehiculo WHERE identificador = '" + identificador + "'";
+            _dataAccessBase.ExecuteNonQuery(sql);
+        }
+
+
+        public void Consultar()
+        {
+
+
+            var sql = "SELECT marca FROM vehiculo";
+
+            List<string> lista = new List<string>();
+
+            NpgsqlDataReader dr;
+
+            dr = sql.ExecuteReader();
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    lista.Add(dr.GetString(0));
+                    lista.Add(dr.GetString(1));
+                    lista.Add(dr.GetString(2));
+                    lista.Add(dr.GetString(3));
+                    lista.Add(dr.GetString(4));
+                    lista.Add(dr.GetString(5));
+                }
+            }
+
             _dataAccessBase.ExecuteNonQuery(sql);
         }
     }

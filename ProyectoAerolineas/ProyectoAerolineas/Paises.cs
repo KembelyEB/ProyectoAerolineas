@@ -65,7 +65,60 @@ namespace ProyectoAerolineas
             lblMensaje.Visible = true;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ModificarPais();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EliminarrPais();
+        }
+
+        private void ModificarPais()
+        {
+            var pais = new Pais
+            {
+                Nombre = txtNombre.Text,
 
 
+            };
+
+            var paisBo = new PaisesBO();
+
+            try
+            {
+                paisBo.Modificar(pais);
+                MonstrarMensaje("Pais modificado satisfactoriamente");
+            }
+            catch (Exception e)
+            {
+                MonstrarError(e.Message);
+            }
+        }
+        private void EliminarrPais()
+        {
+            var pais = new Pais
+            {
+                Nombre = txtNombre.Text,
+
+
+            };
+
+            var paisBo = new PaisesBO();
+
+            try
+            {
+                if (!txtNombre.Text.Equals(""))
+                {
+                    paisBo.Eliminaro(txtNombre.Text.Trim());
+                    MonstrarMensaje("Pais  eliminado satisfactoriamente");
+                }
+            }
+            catch (Exception e)
+            {
+                MonstrarError(e.Message);
+            }
+        }
     }
 }

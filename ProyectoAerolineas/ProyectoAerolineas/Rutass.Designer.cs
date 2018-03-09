@@ -100,6 +100,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -109,6 +110,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridView1
             // 
@@ -126,7 +128,7 @@
             this.lblMensaje.Size = new System.Drawing.Size(0, 13);
             this.lblMensaje.TabIndex = 9;
             // 
-            // Ruta
+            // Rutass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,7 +143,7 @@
             this.Controls.Add(this.txtPaisDestino);
             this.Controls.Add(this.txtPaisOrigen);
             this.Controls.Add(this.txtDuracion);
-            this.Name = "Ruta";
+            this.Name = "Rutass";
             this.Text = "Duracion:";
             this.Load += new System.EventHandler(this.Ruta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -64,5 +64,61 @@ namespace ProyectoAerolineas
             lblMensaje.ForeColor = Color.DarkRed;
             lblMensaje.Visible = true;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ModificarAeropuerto();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EliminarAeropuerto();
+        }
+
+        private void ModificarAeropuerto()
+        {
+            var aeropuerto = new Aeropuerto
+            {
+                Nombre = txtNombre.Text,
+                Localidad = txtLocalidad.Text,
+                Iata = txtIata.Text
+            };
+
+            var AeropuertoBo = new AeropuertoBO();
+
+            try
+            {
+                AeropuertoBo.Modificar(aeropuerto);
+                MonstrarMensaje("Aeropuerto modificado satisfactoriamente");
+            }
+            catch (Exception e)
+            {
+                MonstrarError(e.Message);
+            }
+        }
+        private void EliminarAeropuerto()
+        {
+            var aeropuerto = new Aeropuerto
+            {
+                Nombre = txtNombre.Text,
+                Localidad = txtLocalidad.Text,
+                Iata = txtIata.Text
+            };
+
+            var AeropuertoBo = new AeropuertoBO();
+            try { 
+            if (!txtNombre.Text.Equals(""))
+            {
+                AeropuertoBo.Eliminaro(txtNombre.Text.Trim());
+                MonstrarMensaje("Aeropuerto eliminado satisfactoriamente");
+            }
+        }
+
+            catch (Exception e)
+            {
+                MonstrarError(e.Message);
+            }
+        
+        }
     }
 }

@@ -138,6 +138,7 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -147,6 +148,7 @@
             this.button3.TabIndex = 11;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridView1
             // 
@@ -164,7 +166,7 @@
             this.lblMensaje.Size = new System.Drawing.Size(0, 13);
             this.lblMensaje.TabIndex = 13;
             // 
-            // Vehiculo
+            // Vehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -183,7 +185,7 @@
             this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMarca);
-            this.Name = "Vehiculo";
+            this.Name = "Vehiculos";
             this.Text = "Marca:";
             this.Load += new System.EventHandler(this.Vehiculo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

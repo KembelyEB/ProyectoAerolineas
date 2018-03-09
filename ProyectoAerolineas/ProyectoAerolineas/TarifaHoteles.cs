@@ -67,5 +67,63 @@ namespace ProyectoAerolineas
             lblMensaje.ForeColor = Color.DarkRed;
             lblMensaje.Visible = true;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ModificarTarifaHotel();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EliminarTarifaHotel();
+        }
+
+        private void ModificarTarifaHotel()
+        {
+            var tHotel = new TarifaHotel
+            {
+                Precio = txtPrecio.Text,
+
+
+
+            };
+
+            var taHotelBo = new TarifaHotelBO();
+
+            try
+            {
+                taHotelBo.Modificar(tHotel);
+                MonstrarMensaje("Tarifa hotel modificado satisfactoriamente");
+            }
+            catch (Exception e)
+            {
+                MonstrarError(e.Message);
+            }
+        }
+        private void EliminarTarifaHotel()
+        {
+            var tHotel = new TarifaHotel
+            {
+                Precio = txtPrecio.Text,
+
+
+
+            };
+
+            var taHotelBo = new TarifaHotelBO();
+
+            try
+            {
+                if (!txtPrecio.Text.Equals(""))
+                {
+                    taHotelBo.Eliminar(txtPrecio.Text.Trim());
+                    MonstrarMensaje(" Tarifa de Hotel eliminado satisfactoriamente");
+                }
+            }
+            catch (Exception e)
+            {
+                MonstrarError(e.Message);
+            }
+        }
     }
 }

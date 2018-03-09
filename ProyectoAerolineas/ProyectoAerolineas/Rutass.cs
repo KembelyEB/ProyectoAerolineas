@@ -66,5 +66,65 @@ namespace ProyectoAerolineas
             lblMensaje.ForeColor = Color.DarkRed;
             lblMensaje.Visible = true;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ModificarrRuta()
+        {
+            var ruta = new Ruta
+            {
+                Duracion = txtDuracion.Text,
+                Pais_Origen = txtPaisOrigen.Text,
+                Pais_Destino = txtPaisDestino.Text,
+
+
+            };
+
+            var rutaBo = new RutaBO();
+
+            try
+            {
+                rutaBo.Modificar(ruta);
+                MonstrarMensaje("Ruta modificada satisfactoriamente");
+            }
+            catch (Exception e)
+            {
+                MonstrarError(e.Message);
+            }
+        }
+        private void EliminarRuta()
+        {
+            var ruta = new Ruta
+            {
+                Duracion = txtDuracion.Text,
+                Pais_Origen = txtPaisOrigen.Text,
+                Pais_Destino = txtPaisDestino.Text,
+
+
+            };
+
+            var rutaBo = new RutaBO();
+
+            try
+            {
+                if (!txtDuracion.Text.Equals(""))
+                {
+                    rutaBo.Eliminaro(txtDuracion.Text.Trim());
+                    MonstrarMensaje("Ruta eliminado satisfactoriamente");
+                }
+            }
+            catch (Exception e)
+            {
+                MonstrarError(e.Message);
+            }
+        }
     }
 }
