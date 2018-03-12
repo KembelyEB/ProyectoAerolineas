@@ -50,13 +50,12 @@ namespace AerolineasDATOS
         {
 
 
-            var sql = "SELECT marca FROM vehiculo";
+            var connectioStringProvider = new ConnectionStringProvider();
+            var connection = new NpgsqlConnection(connectioStringProvider.GetConnectionString());
+            List<object> lista = new List<object>();
 
-            List<string> lista = new List<string>();
-
-            NpgsqlDataReader dr;
-
-            dr = sql.ExecuteReader();
+            var command = new NpgsqlCommand("SELECT marca FROM vehiculo", connection);
+            NpgsqlDataReader dr = command.ExecuteReader();
 
             if (dr.HasRows)
             {
@@ -71,7 +70,7 @@ namespace AerolineasDATOS
                 }
             }
 
-            _dataAccessBase.ExecuteNonQuery(sql);
+            connection.Close();
         }
     }
 }

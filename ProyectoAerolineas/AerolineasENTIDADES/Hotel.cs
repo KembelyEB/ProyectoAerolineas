@@ -11,5 +11,7 @@
         public string Pais { get; set; }
         public string Lugar { get; set; }
         public string Habitacion { get; set; }
+        public string fk_TarifaVuelo { get; set; }
+
     }
 }
