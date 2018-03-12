@@ -201,6 +201,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AerolineasDATOS\AerolineasDATOS.csproj">
+      <Project>{278f4cd6-c534-4172-b02f-b7e81abc2e94}</Project>
+      <Name>AerolineasDATOS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AerolineasENTIDADES\AerolineasENTIDADES.csproj">
       <Project>{b75a301b-01ae-4bec-b05e-00a6e3abaa1f}</Project>
       <Name>AerolineasENTIDADES</Name>

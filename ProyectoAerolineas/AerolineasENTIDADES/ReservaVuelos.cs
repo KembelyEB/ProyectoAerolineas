@@ -13,7 +13,7 @@ namespace AerolineasENTIDADES
         public DateTime salida { get; set; }
         public DateTime llegada{ get; set; }
         public string Pasajeros{ get; set; }
-        public int  fk_TarifaVuelo { get; set; }
+        public int  id_Ruta { get; set; }
 
 
 

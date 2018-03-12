@@ -32,16 +32,16 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPasajeros = new System.Windows.Forms.TextBox();
+            this.txtDestino = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtLLEGADA = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtIDA = new System.Windows.Forms.DateTimePicker();
+            this.txtOrigen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -68,6 +68,7 @@
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -92,18 +93,19 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblMensaje);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.txtPasajeros);
+            this.tabPage1.Controls.Add(this.txtDestino);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.dateTimePicker2);
+            this.tabPage1.Controls.Add(this.dtLLEGADA);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.dtIDA);
+            this.tabPage1.Controls.Add(this.txtOrigen);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -123,6 +125,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Reservar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -132,20 +135,21 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox3
+            // txtPasajeros
             // 
-            this.textBox3.Location = new System.Drawing.Point(484, 35);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtPasajeros.Location = new System.Drawing.Point(484, 35);
+            this.txtPasajeros.Name = "txtPasajeros";
+            this.txtPasajeros.Size = new System.Drawing.Size(100, 20);
+            this.txtPasajeros.TabIndex = 10;
             // 
-            // textBox2
+            // txtDestino
             // 
-            this.textBox2.Location = new System.Drawing.Point(293, 35);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtDestino.Location = new System.Drawing.Point(293, 35);
+            this.txtDestino.Name = "txtDestino";
+            this.txtDestino.Size = new System.Drawing.Size(100, 20);
+            this.txtDestino.TabIndex = 9;
             // 
             // label5
             // 
@@ -165,12 +169,12 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "PASAJEROS:";
             // 
-            // dateTimePicker2
+            // dtLLEGADA
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(384, 120);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 6;
+            this.dtLLEGADA.Location = new System.Drawing.Point(384, 120);
+            this.dtLLEGADA.Name = "dtLLEGADA";
+            this.dtLLEGADA.Size = new System.Drawing.Size(200, 20);
+            this.dtLLEGADA.TabIndex = 6;
             // 
             // label3
             // 
@@ -198,19 +202,19 @@
             this.dataGridView1.Size = new System.Drawing.Size(599, 132);
             this.dataGridView1.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dtIDA
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(75, 119);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtIDA.Location = new System.Drawing.Point(75, 119);
+            this.dtIDA.Name = "dtIDA";
+            this.dtIDA.Size = new System.Drawing.Size(200, 20);
+            this.dtIDA.TabIndex = 2;
             // 
-            // textBox1
+            // txtOrigen
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtOrigen.Location = new System.Drawing.Point(97, 35);
+            this.txtOrigen.Name = "txtOrigen";
+            this.txtOrigen.Size = new System.Drawing.Size(100, 20);
+            this.txtOrigen.TabIndex = 1;
             // 
             // label1
             // 
@@ -456,6 +460,14 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "TIPO DE AUTO:";
             // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Location = new System.Drawing.Point(319, 180);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 13);
+            this.lblMensaje.TabIndex = 14;
+            // 
             // BuscaVuelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -487,16 +499,16 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dtIDA;
+        private System.Windows.Forms.TextBox txtOrigen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPasajeros;
+        private System.Windows.Forms.TextBox txtDestino;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtLLEGADA;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -523,5 +535,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }
