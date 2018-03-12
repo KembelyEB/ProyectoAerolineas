@@ -16,7 +16,7 @@ namespace AerolineasDATOS
         public void InsertarDatos(ReservaVuelos Rvuelo)
         {
             var sql =
-                "INSERT INTO ReservaVuelo (origen destino salida llegada ppasajeros id_TarifaVuelo) VALUES ('" + Rvuelo.Origen + "', '" +
+                "INSERT INTO reservaVuelo (origen, destino, salida ,llegada ,pasajeros, id_TarifaVuelo) VALUES ('" + Rvuelo.Origen + "', '" +
                 Rvuelo.Destino+ "', '" +
                 Rvuelo.salida+ "', '" +
                 Rvuelo.llegada+ "', '" +
@@ -28,7 +28,7 @@ namespace AerolineasDATOS
         public void ModificarDatos(ReservaVuelos Rvuelo)
         {
             var sql =
-                "UPDATE ReservaVuelo SET origen = '" + Rvuelo.Origen + "', destino = '" + Rvuelo.Destino + "', salida = '" + Rvuelo.salida
+                "UPDATE reservaVuelo SET origen = '" + Rvuelo.Origen + "', destino = '" + Rvuelo.Destino + "', salida = '" + Rvuelo.salida
                 + "', llegada = '" + Rvuelo.llegada + "', pasajeros = '" + Rvuelo.Pasajeros + "' WHERE id = '" +
                 Rvuelo.Identificador + "'";
             _dataAccessBase.ExecuteNonQuery(sql);
@@ -36,7 +36,7 @@ namespace AerolineasDATOS
 
         public void EliminarDatos(int id)
         {
-            var sql = "DELETE FROM ReservaVuelo WHERE id = '" + id + "'";
+            var sql = "DELETE FROM reservaVuelo WHERE id = '" + id + "'";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 

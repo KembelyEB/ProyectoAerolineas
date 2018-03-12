@@ -14,7 +14,7 @@ namespace AerolineasDATOS
         /// <param name="aeropuerto"></param>
         public void InsertarDatos(Aeropuerto aeropuerto)
         {
-            var sql = "INSERT INTO aeropuertos (identificador, nombre, localidad, iata ) VALUES ('" + aeropuerto.Identificador +
+            var sql = "INSERT INTO aeropuertos (id, nombre, localidad, iata ) VALUES ('" + aeropuerto.Identificador +
                       "', '" + aeropuerto.Nombre + "', '" + aeropuerto.Localidad + "', '" + aeropuerto.Iata + "')";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
@@ -25,16 +25,16 @@ namespace AerolineasDATOS
         public void ModificarDatos(Aeropuerto aeropuerto)
         {
             var sql = "UPDATE aeropuertos SET nombre = '" + aeropuerto.Nombre + "', localidad = '" + aeropuerto.Localidad + "', iata = '" +
-                      aeropuerto.Iata+ "' WHERE identificador = '" + aeropuerto.Identificador + "'";
+                      aeropuerto.Iata+ "' WHERE id = '" + aeropuerto.Identificador + "'";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
         /// <summary>
         /// this method removes an airport object into the database
         /// </summary>
         /// <param name="identificador"></param>
-        public void EliminarDatos(string identificador)
+        public void EliminarDatos(string id)
         {
-            var sql = "DELETE FROM aeropuertos WHERE identificador = '" + identificador + "'";
+            var sql = "DELETE FROM aeropuertos WHERE id = '" + id + "'";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
     }

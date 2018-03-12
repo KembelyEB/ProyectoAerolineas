@@ -16,7 +16,7 @@ namespace AerolineasDATOS
         /// <param name="hotel"></param>
         public void InsertarDatos(Hotel hotel)
         {
-            var sql = "INSERT INTO hoteles (identificador, nombre, foto, pais, lugar, habitaciones) VALUES ('" +
+            var sql = "INSERT INTO hoteles (id, nombre, foto, pais, lugar, habitaciones) VALUES ('" +
                       hotel.Identificador + "', '" + hotel.Nombre + "', '" + hotel.Foto + "', '" + hotel.Pais + "', '" + hotel.Lugar + "', '" +
                       hotel.Habitacion + "')";
             _dataAccessBase.ExecuteNonQuery(sql);

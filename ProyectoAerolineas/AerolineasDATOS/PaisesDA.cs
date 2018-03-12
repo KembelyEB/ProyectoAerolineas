@@ -14,7 +14,7 @@ namespace AerolineasDATOS
         /// </summary>
         public void InsertarDatos(Pais pais)
         {
-            var sql = "INSERT INTO paises (identificador, nombre, bandera) VALUES ('" + pais.Identificador + "', '" +
+            var sql = "INSERT INTO paises (id, nombre, bandera) VALUES ('" + pais.Identificador + "', '" +
                       pais.Nombre +
                       "', '" + pais.Bandera + "')";
 
@@ -27,7 +27,7 @@ namespace AerolineasDATOS
         public void ModificarDatos(Pais pais)
         {
             var sql = "UPDATE paises SET nombre = '" + pais.Nombre + "', bandera = '" + pais.Bandera +
-                      "' WHERE identificador = '" +
+                      "' WHERE id = '" +
                       pais.Identificador + "'";
 
             _dataAccessBase.ExecuteNonQuery(sql);
@@ -38,7 +38,7 @@ namespace AerolineasDATOS
         /// </summary>
         public void EliminarDatos(string identificador)
         {
-            var sql = "DELETE FROM paises WHERE identificador = '" + identificador + "'";
+            var sql = "DELETE FROM paises WHERE id = '" + identificador + "'";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
     }

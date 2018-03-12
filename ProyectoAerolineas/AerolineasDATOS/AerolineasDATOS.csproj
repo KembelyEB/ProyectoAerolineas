@@ -59,6 +59,9 @@
     <Compile Include="LugaresDA.cs" />
     <Compile Include="PaisesDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservaHotel.cs" />
+    <Compile Include="ReservasDA.cs" />
+    <Compile Include="ReservaVehiculo.cs" />
     <Compile Include="ReservaVuelo.cs" />
     <Compile Include="RutasDA.cs" />
     <Compile Include="TarifasHotelesDA.cs" />

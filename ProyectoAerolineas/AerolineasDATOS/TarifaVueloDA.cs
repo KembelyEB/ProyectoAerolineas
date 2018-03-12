@@ -14,7 +14,7 @@ namespace AerolineasDATOS
         /// </summary>
         public void InsertarDatos(TarifaVuelo tarifaVuelo)
         {
-            var sql = "INSERT INTO vuelo (identificador, ruta, precio) VALUES ('" + tarifaVuelo.Identificador + "', '" + tarifaVuelo.Ruta +
+            var sql = "INSERT INTO tarifavuelos (id, ruta, precio) VALUES ('" + tarifaVuelo.Identificador + "', '" + tarifaVuelo.Ruta +
                       "', '" +
                        tarifaVuelo.Precio + "')";
 
@@ -27,7 +27,7 @@ namespace AerolineasDATOS
         public void ModificarDatos(TarifaVuelo tarifaVuelo)
         {
             var sql =
-                "UPDATE vuelo SET ruta = '" + tarifaVuelo.Ruta + "', precio = '" + tarifaVuelo.Precio + "' WHERE identificador = '" +
+                "UPDATE tarifavuelos SET ruta = '" + tarifaVuelo.Ruta + "', precio = '" + tarifaVuelo.Precio + "' WHERE id = '" +
                  tarifaVuelo.Identificador + "'";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
@@ -38,7 +38,7 @@ namespace AerolineasDATOS
         /// </summary>
         public void EliminarDatos(string identificador)
         {
-            var sql = "DELETE FROM vuelo WHERE identificador = '" + identificador + "'";
+            var sql = "DELETE FROM tarifavuelos WHERE id = '" + identificador + "'";
             _dataAccessBase.ExecuteNonQuery(sql);
         }
     }
