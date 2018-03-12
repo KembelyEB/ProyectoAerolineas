@@ -1,13 +1,12 @@
 ﻿using AerolineasENTIDADES;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace AerolineasNEGOCIO.Validadores
 {
+    /// <summary>
+    /// this class creates the validation rules for cars
+    /// </summary>
     class VehiculoValidador : AbstractValidator<Vehiculo>
     {
         public VehiculoValidador()

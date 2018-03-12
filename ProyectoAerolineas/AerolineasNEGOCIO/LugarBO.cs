@@ -2,15 +2,14 @@
 using AerolineasENTIDADES;
 using AerolineasNEGOCIO.Validadores;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AerolineasNEGOCIO
 {
-   public  class LugarBO
+    /// <summary>
+    /// this class is responsible for validating and transferring objects
+    /// between the data access layers and the user interface about places
+    /// </summary>
+    public class LugarBO
     {
         private readonly LugaresDA _dataAccess = new LugaresDA();
 

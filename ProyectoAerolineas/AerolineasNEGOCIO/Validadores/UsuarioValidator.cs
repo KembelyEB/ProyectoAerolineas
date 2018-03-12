@@ -3,6 +3,9 @@ using FluentValidation;
 
 namespace AerolineasNEGOCIO.Validadores
 {
+    /// <summary>
+    /// this class creates the validation rules for users
+    /// </summary>
     public class UsuarioValidator : AbstractValidator<Usuario>
     {
         public UsuarioValidator()

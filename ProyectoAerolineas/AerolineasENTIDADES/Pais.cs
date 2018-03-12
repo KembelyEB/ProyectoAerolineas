@@ -1,5 +1,8 @@
 ﻿namespace AerolineasENTIDADES
 {
+    /// <summary>
+    /// this class creates the country object
+    /// </summary>
     public class Pais
     {
         public string Identificador { get; set; }

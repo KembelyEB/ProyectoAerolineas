@@ -2,10 +2,16 @@
 
 namespace AerolineasDATOS
 {
+    /// <summary>
+    /// this class makes the connection to database about routes
+    /// </summary>
     public class RutasDA
     {
         private readonly DataAccessBase _dataAccessBase = new DataAccessBase();
 
+        /// <summary>
+        /// this method inserts a route object into the database
+        /// </summary>
         public void InsertarDatos(Ruta ruta)
         {
             var sql = "INSERT INTO ruta (identificador, pais_origen, pais_destino, duracion) VALUES ('" +
@@ -15,6 +21,9 @@ namespace AerolineasDATOS
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
+        /// <summary>
+        /// this method modifies a route object into the database
+        /// </summary>
         public void ModificarDatos(Ruta ruta)
         {
             var sql = "UPDATE ruta SET pais_origen = '" + ruta.Pais_Origen + "', pais_destino = '" + ruta.Pais_Destino + "', duracion = '" +
@@ -23,6 +32,9 @@ namespace AerolineasDATOS
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
+        /// <summary>
+        /// this method removes a route object into the database
+        /// </summary>
         public void EliminarDatos(string identificador)
         {
             var sql = "DELETE FROM ruta WHERE identificador = '" + identificador + "'";

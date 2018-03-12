@@ -4,6 +4,9 @@ using System.Text;
 
 namespace AerolineasENTIDADES
 {
+    /// <summary>
+    /// this class creates the flight rate object
+    /// </summary>
     public class TarifaVuelo
     {
 

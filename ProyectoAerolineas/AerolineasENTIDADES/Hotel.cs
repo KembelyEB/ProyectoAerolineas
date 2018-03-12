@@ -1,5 +1,8 @@
 ﻿namespace AerolineasENTIDADES
 {
+    /// <summary>
+    /// this class creates the hotel object
+    /// </summary>
     public class Hotel
     {
         public string Identificador { get; set; }

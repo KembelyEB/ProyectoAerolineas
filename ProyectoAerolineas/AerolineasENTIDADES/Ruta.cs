@@ -1,5 +1,8 @@
 ﻿namespace AerolineasENTIDADES
 {
+    /// <summary>
+    /// this class creates the route object
+    /// </summary>
     public class Ruta
     {
         public string Identificador { get; set; }

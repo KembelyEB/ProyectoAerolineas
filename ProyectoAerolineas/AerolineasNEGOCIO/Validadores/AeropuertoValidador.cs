@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace AerolineasNEGOCIO.Validadores
 {
+    /// <summary>
+    /// this class creates the validation rules for airports
+    /// </summary>
     class AeropuertoValidador : AbstractValidator<Aeropuerto>
     {
         public AeropuertoValidador()

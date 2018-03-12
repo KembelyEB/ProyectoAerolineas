@@ -1,14 +1,13 @@
 ﻿using AerolineasENTIDADES;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace AerolineasNEGOCIO.Validadores
 {
-   public  class PaisValidador : AbstractValidator<Pais>
+    /// <summary>
+    /// this class creates the validation rules for countries
+    /// </summary>
+    public class PaisValidador : AbstractValidator<Pais>
     {
         public PaisValidador()
         {

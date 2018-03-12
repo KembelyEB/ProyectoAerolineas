@@ -1,5 +1,8 @@
 ﻿namespace AerolineasDATOS
 {
+    /// <summary>
+    /// this class makes the connection to the database in general
+    /// </summary>
     public class ConnectionStringProvider
     {
         public string GetConnectionString()

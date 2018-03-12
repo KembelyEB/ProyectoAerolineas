@@ -2,15 +2,14 @@
 using AerolineasENTIDADES;
 using AerolineasNEGOCIO.Validadores;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AerolineasNEGOCIO
 {
-   public  class PaisesBO
+    /// <summary>
+    /// this class is responsible for validating and transferring objects
+    /// between the data access layers and the user interface about countries
+    /// </summary>
+    public class PaisesBO
     {
 
         private readonly PaisesDA _dataAccess = new PaisesDA();

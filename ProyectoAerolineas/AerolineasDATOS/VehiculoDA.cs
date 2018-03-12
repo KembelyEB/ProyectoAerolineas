@@ -4,10 +4,16 @@ using System.Collections.Generic;
 
 namespace AerolineasDATOS
 {
+    /// <summary>
+    /// this class makes the connection to database about cars
+    /// </summary>
     public class VehiculoDA
     {
         private readonly DataAccessBase _dataAccessBase = new DataAccessBase();
 
+        /// <summary>
+        /// this method inserts a car object into the database
+        /// </summary>
         public void InsertarDatos(Vehiculo vehiculo)
         {
             var sql =
@@ -18,6 +24,9 @@ namespace AerolineasDATOS
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
+        /// <summary>
+        /// this method modifies a car object into the database
+        /// </summary>
         public void ModificarDatos(Vehiculo vehiculo)
         {
             var sql =
@@ -27,6 +36,9 @@ namespace AerolineasDATOS
             _dataAccessBase.ExecuteNonQuery(sql);
         }
 
+        /// <summary>
+        /// this method removes a car object into the database
+        /// </summary>
         public void EliminarDatos(string identificador)
         {
             var sql = "DELETE FROM vehiculo WHERE identificador = '" + identificador + "'";

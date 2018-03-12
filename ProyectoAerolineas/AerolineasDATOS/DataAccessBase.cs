@@ -2,6 +2,9 @@
 
 namespace AerolineasDATOS
 {
+    /// <summary>
+    /// this class obtains the method that executes queries to the database
+    /// </summary>
     public class DataAccessBase
     {
         public void ExecuteNonQuery(string sql)

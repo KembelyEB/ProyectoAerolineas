@@ -1,14 +1,13 @@
 ﻿using AerolineasENTIDADES;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace AerolineasNEGOCIO.Validadores
 {
-   public  class TarifaVueloValidador : AbstractValidator<TarifaVuelo>
+    /// <summary>
+    /// this class creates the validation rules for flight rates
+    /// </summary>
+    public class TarifaVueloValidador : AbstractValidator<TarifaVuelo>
     {
         public TarifaVueloValidador()
         {

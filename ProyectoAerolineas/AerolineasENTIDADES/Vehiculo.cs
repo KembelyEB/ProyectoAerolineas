@@ -1,5 +1,8 @@
 ﻿namespace AerolineasENTIDADES
 {
+    /// <summary>
+    /// this class creates the car object
+    /// </summary>
     public class Vehiculo
     {
         public string Identificador { get; set; }
