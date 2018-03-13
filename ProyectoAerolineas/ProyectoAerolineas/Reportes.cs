@@ -18,7 +18,11 @@ namespace ProyectoAerolineas
             InitializeComponent();
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
+        private void Reportes_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
             //los vectores con los datos
@@ -28,7 +32,7 @@ namespace ProyectoAerolineas
             //cambiar color
             chart1.Palette = ChartColorPalette.Chocolate;
 
-            chart1.Titles.Add("hhh");
+            chart1.Titles.Add("Hoteles Reservados");
 
             for (int i = 0; i < series.Length; i++)
             {
@@ -42,7 +46,7 @@ namespace ProyectoAerolineas
 
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void tabPage2_Click(object sender, EventArgs e)
         {
             //los vectores con los datos
             string[] series = { "", "", "" };
@@ -51,7 +55,7 @@ namespace ProyectoAerolineas
             //cambiar color
             chart1.Palette = ChartColorPalette.Chocolate;
 
-            chart1.Titles.Add("hhh");
+            chart1.Titles.Add("Personas Reservadas");
 
             for (int i = 0; i < series.Length; i++)
             {
@@ -73,7 +77,7 @@ namespace ProyectoAerolineas
             //cambiar color
             chart1.Palette = ChartColorPalette.Chocolate;
 
-            chart1.Titles.Add("hhh");
+            chart1.Titles.Add("Visitas por país");
 
             for (int i = 0; i < series.Length; i++)
             {
@@ -95,7 +99,7 @@ namespace ProyectoAerolineas
             //cambiar color
             chart1.Palette = ChartColorPalette.Chocolate;
 
-            chart1.Titles.Add("hhh");
+            chart1.Titles.Add("Adultos que han viajado");
 
             for (int i = 0; i < series.Length; i++)
             {
@@ -118,7 +122,7 @@ namespace ProyectoAerolineas
             //cambiar color
             chart1.Palette = ChartColorPalette.Chocolate;
 
-            chart1.Titles.Add("hhh");
+            chart1.Titles.Add("Niños que han viajado");
 
             for (int i = 0; i < series.Length; i++)
             {
@@ -140,7 +144,7 @@ namespace ProyectoAerolineas
             //cambiar color
             chart1.Palette = ChartColorPalette.Chocolate;
 
-            chart1.Titles.Add("hhh");
+            chart1.Titles.Add("Vehiculos más rentados");
 
             for (int i = 0; i < series.Length; i++)
             {
