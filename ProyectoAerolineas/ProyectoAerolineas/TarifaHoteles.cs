@@ -1,5 +1,6 @@
 ﻿using AerolineasENTIDADES;
 using AerolineasNEGOCIO;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,37 @@ namespace ProyectoAerolineas
         public TarifaHoteles()
         {
             InitializeComponent();
+            CargarGrit();
+
+        }
+
+        static NpgsqlConnection conexion;
+        static NpgsqlCommand cmd;
+
+        public static void Conexion()
+        {
+            string servidor = "localhost";
+            int puerto = 5432;
+            string usuario = "postgres";
+            String clave = "lanegra15";
+            string baseDatos = "aerolineas";
+
+            string cadenaConexion = "Server=" + servidor + ";" + "Port=" + puerto + ";" + "User Id=" + usuario + ";" + "Password=" + clave + ";" + "Database=" + baseDatos;
+            conexion = new NpgsqlConnection(cadenaConexion);
+        }
+
+        public void CargarGrit()
+        {
+            Conexion();
+            conexion.Open();
+            DataSet dataset = new DataSet();
+
+            NpgsqlDataAdapter adapter = new NpgsqlDataAdapter("SELECT id, precio  FROM tarifahoteles", conexion);
+            adapter.Fill(dataset, "tarifashoteles");
+            dataGridView1.DataSource = dataset.Tables[0];
+            dataGridView1.Columns[0].HeaderCell.Value = "ID";
+            dataGridView1.Columns[1].HeaderCell.Value = "PRECIO";
+            conexion.Close();
         }
 
         private void TarifaHoteles_Load(object sender, EventArgs e)

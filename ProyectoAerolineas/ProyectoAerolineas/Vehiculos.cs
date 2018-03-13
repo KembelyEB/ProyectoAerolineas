@@ -1,5 +1,6 @@
 ﻿using AerolineasENTIDADES;
 using AerolineasNEGOCIO;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,41 @@ namespace ProyectoAerolineas
         public Vehiculos()
         {
             InitializeComponent();
+            CargarGrit();
+
+        }
+
+        static NpgsqlConnection conexion;
+        static NpgsqlCommand cmd;
+
+        public static void Conexion()
+        {
+            string servidor = "localhost";
+            int puerto = 5432;
+            string usuario = "postgres";
+            String clave = "lanegra15";
+            string baseDatos = "aerolineas";
+
+            string cadenaConexion = "Server=" + servidor + ";" + "Port=" + puerto + ";" + "User Id=" + usuario + ";" + "Password=" + clave + ";" + "Database=" + baseDatos;
+            conexion = new NpgsqlConnection(cadenaConexion);
+        }
+
+        public void CargarGrit()
+        {
+            Conexion();
+            conexion.Open();
+            DataSet dataset = new DataSet();
+
+            NpgsqlDataAdapter adapter = new NpgsqlDataAdapter("SELECT id, marca, modelo, tipo, precio, cantidad FROM vehiculos", conexion);
+            adapter.Fill(dataset, "Vehiculos");
+            dataGridView1.DataSource = dataset.Tables[0];
+            dataGridView1.Columns[0].HeaderCell.Value = "ID";
+            dataGridView1.Columns[1].HeaderCell.Value = "MARCA";
+            dataGridView1.Columns[2].HeaderCell.Value = "MODELO";
+            dataGridView1.Columns[3].HeaderCell.Value = "TIPO";
+            dataGridView1.Columns[4].HeaderCell.Value = "PRECIO";
+            dataGridView1.Columns[5].HeaderCell.Value = "CANTIDAD";
+            conexion.Close();
         }
 
         private void Vehiculo_Load(object sender, EventArgs e)
